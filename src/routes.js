@@ -9,6 +9,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import Login from './components/Login/Login';
 import Error404 from './components/Error/404';
+import Post from './components/Post';
 
 const AppRoutes = () => (
   <App>
@@ -19,6 +20,7 @@ const AppRoutes = () => (
       <Route path="/about" component={About} exact />
       <Route path="/contact" component={Contact} exact />
       <Route path="/login" component={Login} exact />
+      <Route path="/post/:id" component={Post} exact />
       <Error404 component={Error404} />
     </Switch>
   </App>
