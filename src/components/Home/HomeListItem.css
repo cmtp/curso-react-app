@@ -1,0 +1,11 @@
+.HomeListItem {
+    width: 27%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

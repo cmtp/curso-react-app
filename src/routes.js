@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import App from './components/App';
-import Home from './components/Home/Home';
+import Home from './components/Home';
 import Timer from './components/Pomodoro/Timer';
 import Todo from './components/Todo/Todo';
 import About from './components/About/About';
