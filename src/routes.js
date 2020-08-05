@@ -11,6 +11,8 @@ import Login from './components/Login/Login';
 import Error404 from './components/Error/404';
 import Post from './components/Post';
 import Create from './components/Create';
+import AppHooks from './components/Hooks/App';
+import Users from './components/Users/Users';
 
 const AppRoutes = () => (
   <App>
@@ -23,6 +25,8 @@ const AppRoutes = () => (
       <Route path="/login" component={Login} exact />
       <Route path="/posts/:id" component={Post} exact />
       <Route path="/posts" component={Create} exact />
+      <Route path="/hooks" component={AppHooks} exact />
+      <Route path="/users" component={Users} exact />
       <Error404 component={Error404} />
     </Switch>
   </App>
