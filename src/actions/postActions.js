@@ -1,3 +1,4 @@
+import { actions } from 'react-redux-form';
 import { request, received, error } from '../shared/redux/baseActions';
 
 import PostService from '../services/PostService';
@@ -77,4 +78,8 @@ export const deletePost = (id) => async (dispatch) => {
     // eslint-disable-next-line
     console.log('AXIOS_ERROR:', err.response);
   }
+};
+
+export const resetPostForm = () => (dispatch) => {
+  dispatch(actions.reset('postForm'));
 };
