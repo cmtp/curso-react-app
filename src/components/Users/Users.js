@@ -5,14 +5,16 @@ import UserItem from './UserItem';
 
 const Users = () => {
   const [userList, setUserList] = useState([]);
+  const [loading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await UserService.getUsers();
       setUserList(response.data);
+      // setLoading(false);
     };
     fetchData();
-  }, [userList]);
+  }, [loading]);
 
   return (
     <div>

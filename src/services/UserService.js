@@ -10,6 +10,15 @@ const getUsers = async (limit = 10, page = 0) => {
   return response;
 };
 
+const addUser = async (user) => {
+  const response = await API.post(`${URL_USERS}`, user);
+  if (response.error) {
+    throw new Error('Occurred while is creating');
+  }
+  return response;
+};
+
 export default {
   getUsers,
+  addUser,
 };

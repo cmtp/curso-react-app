@@ -65,6 +65,12 @@
       "id": "c27e65d4-73d9-4058-be59-d38a5a222356",
       "name": "christian tola",
       "email": "ctola@example.com"
+    },
+    {
+      "name": "carlos Perez",
+      "email": "cperez@sample.com",
+      "password": "admin123",
+      "id": "e9RUR3W"
     }
   ]
 }

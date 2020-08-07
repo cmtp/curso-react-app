@@ -13,6 +13,7 @@ import Post from './components/Post';
 import Create from './components/Create';
 import AppHooks from './components/Hooks/App';
 import Users from './components/Users/Users';
+import UserCreate from './components/Users/UserCreate';
 
 const AppRoutes = () => (
   <App>
@@ -27,6 +28,7 @@ const AppRoutes = () => (
       <Route path="/posts" component={Create} exact />
       <Route path="/hooks" component={AppHooks} exact />
       <Route path="/users" component={Users} exact />
+      <Route path="/users/create" component={UserCreate} exact />
       <Error404 component={Error404} />
     </Switch>
   </App>

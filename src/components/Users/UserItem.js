@@ -8,8 +8,10 @@ import {
   CardSubtitle
 } from 'reactstrap';
 
+import './UserItem.css';
+
 const UserItem = ({ user }) => (
-  <div className="UserItem">
+  <div className="UserItem col-lg-4 col-md-6 col-xs-12">
     <Card>
       <CardImg top width="100%" src="https://picsum.photos/200/150" alt="Card image cap" />
       <CardBody>
