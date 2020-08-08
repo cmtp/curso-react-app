@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import { func } from 'prop-types';
+import { func, object } from 'prop-types';
 import { Form, Control, Errors } from 'react-redux-form';
 import { FormGroup, Label, Button } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 
 const required = (val) => val && val.length;
 
 class CreateForm extends Component {
   handleOnSubmit = (values) => {
     this.handleAddNewPost(values);
+    this.props.history.push('/');
   };
 
   handleAddNewPost = (values) => {
@@ -92,6 +94,7 @@ class CreateForm extends Component {
 CreateForm.propTypes = {
   addPost: func,
   resetPostForm: func,
+  history: object
 };
 
-export default CreateForm;
+export default withRouter(CreateForm);

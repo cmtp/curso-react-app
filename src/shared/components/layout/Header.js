@@ -36,6 +36,11 @@ const Header = (props) => {
                 Contact
               </Link>
             </NavItem>
+            <NavItem>
+              <Link className="nav-link" to="/posts">
+                New Post
+              </Link>
+            </NavItem>
           </Nav>
           <Nav navbar>
             <NavItem>

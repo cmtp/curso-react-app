@@ -9,7 +9,8 @@
     "describe": true,
     "it": true,
     "jest": true,
-    "beforeEach": true
+    "beforeEach": true,
+    "cy": true
   },
   "rules": {
     "arrow-parens": "off",
