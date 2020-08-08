@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from 'react';
-
-import UserService from '../../services/UserService';
+import React from 'react';
 import UserItem from './UserItem';
+import useFetch from '../../shared/hooks/useFetch';
 
 const Users = () => {
-  const [userList, setUserList] = useState([]);
-  const [loading] = useState(false);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await UserService.getUsers();
-      setUserList(response.data);
-      // setLoading(false);
-    };
-    fetchData();
-  }, [loading]);
+  const [userList, loading] = useFetch('User', 'GET');
 
   return (
     <div>
-      <div className="container row">
-        {userList.map((item) => (
-          <UserItem key={item.id} user={item} />
-        ))}
-      </div>
+      {loading ? (
+        <div>Loading.</div>
+      ) : (
+        <div className="container row">
+          {userList.map((item) => (
+            <UserItem key={item.id} user={item} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

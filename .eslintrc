@@ -5,7 +5,11 @@
     "document": true,
     "test": true,
     "expect": true,
-    "window": true
+    "window": true,
+    "describe": true,
+    "it": true,
+    "jest": true,
+    "beforeEach": true
   },
   "rules": {
     "arrow-parens": "off",
